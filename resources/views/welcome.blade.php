@@ -1,5 +1,13 @@
 <!doctype html>
 <html lang="{{ app()->getLocale() }}">
+
+<?php
+//$url = $_SERVER['HTTP_HOST'];
+//$parsedUrl = parse_url($url);
+//$host = explode('.', $parsedUrl['host']);
+//$subdomain = $host[0];
+//var_dump($subdomain);
+//die(); ?>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -79,7 +87,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    MinasMars
                 </div>
 
                 <div class="links">
