@@ -13,9 +13,24 @@
 
 Auth::routes();
 
+// Match MinasMars domain
+Route::group(['domain' => 'copiadoramoc.com'], function()
+{
 Route::get('/', function () {
-    return view('welcome');
+    return view('welcome', ['url' => 'copiadoramoc.com']);
 });
+});
+
+// Match a subdomain of my domain
+Route::group(['domain' => '{subdomain}.copiadoramoc.com'], function()
+{
+    Route::any('/', function($subdomain)
+    {
+        return view('welcome', ['url' => $subdomain]);
+    });
+});
+
+
 
 Route::get('foo', function () {
     return 'Hello World';
