@@ -18,17 +18,14 @@ Route::group(['domain' => 'copiadoramoc.com'], function () {
     Route::get('/', function () {
         return view('welcome', ['url' => 'copiadoramoc.com']);
     });
-
-    Route::get('/home', 'HomeController@index')->name('home');
-
 });
 
 // Match a subdomain of my domain
 Route::group(['domain' => '{subdomain}.copiadoramoc.com'], function () {
-    Route::any('/', function ($subdomain) {
-        return view('welcome', ['url' => $subdomain]);
-    });
+    Route::any('/', 'ClientController@index');
 });
+
+Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('foo', function () {
     return 'Hello World';
