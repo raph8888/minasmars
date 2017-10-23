@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Foundation\Inspiring;
 use Illuminate\Http\Request;
 
 class ClientController extends Controller
@@ -13,7 +14,10 @@ class ClientController extends Controller
      */
     public function index($client)
     {
-        return $client;
+
+        $quote = Inspiring::quote();
+        return view('client/index', ['client' => $client, 'quote' => $quote]);
+
         // Check in the database if this $client (subdomain) has been registered.
         // Clients must pay to access this page. Each subdomain represent a paying client.
 
@@ -28,5 +32,15 @@ class ClientController extends Controller
         // Haha.. Why life is so complicated... Break a computer or something.
 
         //
+    }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function subdomainForm()
+    {
+        return view('subdomain_form');
     }
 }
