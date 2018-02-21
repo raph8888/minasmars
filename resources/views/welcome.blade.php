@@ -92,7 +92,7 @@
                 </div>
 
                 <div class="links">
-                    <a href="#">Hi {{ $url }}.</a>
+                    <a href="#">{{ $url }}.</a>
                 </div>
             </div>
         </div>
