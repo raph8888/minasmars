@@ -88,7 +88,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    MinasMars
+                    Minas Mars
                 </div>
 
                 <div class="links">
