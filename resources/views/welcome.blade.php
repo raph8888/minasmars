@@ -93,7 +93,7 @@
 
                 <div class="links">
                     <p>Type a subdomain and get a random inspiring quote</p>
-                    <a href="#">{your_name}.{{ $url }}</a>
+                    <a href="http://try-me.minasmars.com">{try-me}.{{ $url }}</a>
                 </div>
             </div>
         </div>
