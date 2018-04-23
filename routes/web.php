@@ -13,16 +13,8 @@
 
 Auth::routes();
 
-// Match MinasMars domain
-Route::group(['domain' => 'minasmars.com'], function () {
-    Route::get('/', function () {
-        return view('welcome', ['url' => 'minasmars.com']);
-    });
-});
-
-// Match a subdomain of my domain
-Route::group(['domain' => '{subdomain}.minasmars.com'], function () {
-    Route::any('/', 'ClientController@index');
+Route::get('/', function () {
+    return view('welcome2', ['url' => 'minasmars.com']);
 });
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -32,3 +24,15 @@ Route::get('foo', function () {
 });
 
 Route::get('/user', 'UsersController@index');
+
+//// Match MinasMars domain
+//Route::group(['domain' => 'minasmars.com'], function () {
+//    Route::get('/', function () {
+//        return view('welcome', ['url' => 'minasmars.com']);
+//    });
+//});
+//
+//// Match a subdomain of my domain
+//Route::group(['domain' => '{subdomain}.minasmars.com'], function () {
+//    Route::any('/', 'ClientController@index');
+//});
